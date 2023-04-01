@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<character_52> 
+ <character>
+        <cnm>10148730</cnm>
+        <unm>{uid}</unm>
+        <unn></unn>
+        <cls>52</cls>
+        <crd>5</crd> <!-- Star level -->
+        <ast>5201</ast>
+        <l2d>false</l2d>
+        <ehx>0</ehx>
+        <cpt>3</cpt>
+        <rpc>0</rpc>
+        <rwc>0</rwc>
+        <npc>0</npc>
+        <nwc>0</nwc>
+        <tnm>0</tnm>
+        <psi>0</psi>
+        <pmn>0</pmn>
+        <pfr>0</pfr>
+        <psd>0</psd>
+        <hst>false</hst>
+        <ctt>1</ctt>
+        <nrs>0</nrs>
+    </character>
+</character_52>

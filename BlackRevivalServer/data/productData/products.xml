@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<products>
+    <newProduct>
+		<!-- Character Pack 2 -->
+        <pid>PKIP003</pid>
+        <ty>1</ty>
+        <lt>3</lt>
+        <cdt>1588130625000</cdt>
+        <bdt>1588086000000</bdt>
+        <edt>1903100399000</edt>
+    </newProduct>
+    <newProduct>
+		<!-- Unknown -->
+        <pid>CHGD022</pid>
+        <ty>4</ty>
+        <lt>2</lt>
+        <cdt>1605669715000</cdt>
+        <bdt>1605625200000</bdt>
+        <edt>1889708399000</edt>
+    </newProduct>
+    <newProduct>
+        <pid>CHGD005</pid>
+        <ty>4</ty>
+        <lt>2</lt>
+        <cdt>1605669756000</cdt>
+        <bdt>1605625200000</bdt>
+        <edt>1889708399000</edt>
+    </newProduct>
+    <newProduct>
+        <pid>CHGM044</pid>
+        <ty>4</ty>
+        <lt>2</lt>
+        <cdt>1605669775000</cdt>
+        <bdt>1605625200000</bdt>
+        <edt>1889708399000</edt>
+    </newProduct>
+    <newProduct>
+        <pid>CHGD031</pid>
+        <ty>4</ty>
+        <lt>2</lt>
+        <cdt>1605669794000</cdt>
+        <bdt>1605625200000</bdt>
+        <edt>1889708399000</edt>
+    </newProduct>
+    <newProduct>
+        <pid>CHGD012</pid>
+        <ty>4</ty>
+        <lt>2</lt>
+        <cdt>1605669812000</cdt>
+        <bdt>1605625200000</bdt>
+        <edt>1889708399000</edt>
+    </newProduct>
+</products>

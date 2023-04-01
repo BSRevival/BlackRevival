@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<characterSkill_4>  
+  <skillData>
+        <rid>1003</rid>
+        <sid>1003</sid>
+        <scol>4</scol>
+        <mtp>ALL</mtp>
+        <slnt>None</slnt>
+        <sant>Activated</sant>
+        <sat>0</sat>
+        <stp>1</stp>
+        <shd>1</shd>
+        <stt>0</stt>
+        <mst>-1</mst>
+        <ist>0</ist>
+        <drt>0</drt>
+        <drs>0</drs>
+        <cot>40</cot>
+        <cat>0</cat>
+        <crh>true</crh>
+        <alh>false</alh>
+        <ise>false</ise>
+        <asc>true</asc>
+    </skillData>
+    <skillData>
+        <rid>3014</rid>
+        <sid>3014</sid>
+        <scol>4</scol>
+        <mtp>ALL</mtp>
+        <slnt>None</slnt>
+        <sant>Activated</sant>
+        <sat>1</sat>
+        <stp>3</stp>
+        <shd>1</shd>
+        <stt>0</stt>
+        <mst>-1</mst>
+        <ist>0</ist>
+        <drt>0</drt>
+        <drs>0</drs>
+        <cot>15</cot>
+        <cat>0</cat>
+        <crh>true</crh>
+        <alh>false</alh>
+        <ise>false</ise>
+        <asc>true</asc>
+    </skillData>	
+<characterSkill_4> 

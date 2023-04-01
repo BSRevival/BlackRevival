@@ -1,0 +1,657 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <Optimize>False</Optimize>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <Optimize>True</Optimize>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="GameDBDecryptor\**" />
+    <Compile Remove="WatsonWebsocket\**" />
+    <EmbeddedResource Remove="GameDBDecryptor\**" />
+    <EmbeddedResource Remove="WatsonWebsocket\**" />
+    <None Remove="GameDBDecryptor\**" />
+    <None Remove="WatsonWebsocket\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Discord\config.json" />
+    <None Remove="LIVE\11.2.00\Windows64\StandaloneWindows64_aglaiastory.unity3d" />
+    <None Remove="LIVE\11.2.00\Windows64\StandaloneWindows64_background_1.unity3d" />
+    <None Remove="LIVE\11.2.00\Windows64\StandaloneWindows64_background_2.unity3d" />
+    <None Remove="LIVE\11.2.00\Windows64\StandaloneWindows64_character_1.unity3d" />
+    <None Remove="LIVE\11.2.00\Windows64\StandaloneWindows64_character_2.unity3d" />
+    <None Remove="LIVE\11.2.00\Windows64\StandaloneWindows64_character_3.unity3d" />
+    <None Remove="LIVE\11.2.00\Windows64\StandaloneWindows64_character_4.unity3d" />
+    <None Remove="LIVE\11.2.00\Windows64\StandaloneWindows64_character_5.unity3d" />
+    <None Remove="LIVE\11.2.00\Windows64\StandaloneWindows64_character_other.unity3d" />
+    <None Remove="LIVE\11.2.00\Windows64\StandaloneWindows64_character_overlay.unity3d" />
+    <None Remove="LIVE\11.2.00\Windows64\StandaloneWindows64_character_pieces.unity3d" />
+    <None Remove="LIVE\11.2.00\Windows64\StandaloneWindows64_character_scenario.unity3d" />
+    <None Remove="LIVE\11.2.00\Windows64\StandaloneWindows64_cutscene.unity3d" />
+    <None Remove="LIVE\11.2.00\Windows64\StandaloneWindows64_gamedata.unity3d" />
+    <None Remove="LIVE\11.2.00\Windows64\StandaloneWindows64_gametext.unity3d" />
+    <None Remove="LIVE\11.2.00\Windows64\StandaloneWindows64_goods_avatar.unity3d" />
+    <None Remove="LIVE\11.2.00\Windows64\StandaloneWindows64_goods_background_1.unity3d" />
+    <None Remove="LIVE\11.2.00\Windows64\StandaloneWindows64_goods_background_2.unity3d" />
+    <None Remove="LIVE\11.2.00\Windows64\StandaloneWindows64_goods_emoticon.unity3d" />
+    <None Remove="LIVE\11.2.00\Windows64\StandaloneWindows64_goods_furniture.unity3d" />
+    <None Remove="LIVE\11.2.00\Windows64\StandaloneWindows64_goods_lantern.unity3d" />
+    <None Remove="LIVE\11.2.00\Windows64\StandaloneWindows64_goods_other.unity3d" />
+    <None Remove="LIVE\11.2.00\Windows64\StandaloneWindows64_itemicon.unity3d" />
+    <None Remove="LIVE\11.2.00\Windows64\StandaloneWindows64_lantern.unity3d" />
+    <None Remove="LIVE\11.2.00\Windows64\StandaloneWindows64_live2dcharacter_1.unity3d" />
+    <None Remove="LIVE\11.2.00\Windows64\StandaloneWindows64_live2dcharacter_10.unity3d" />
+    <None Remove="LIVE\11.2.00\Windows64\StandaloneWindows64_live2dcharacter_2.unity3d" />
+    <None Remove="LIVE\11.2.00\Windows64\StandaloneWindows64_live2dcharacter_3.unity3d" />
+    <None Remove="LIVE\11.2.00\Windows64\StandaloneWindows64_live2dcharacter_4.unity3d" />
+    <None Remove="LIVE\11.2.00\Windows64\StandaloneWindows64_live2dcharacter_5.unity3d" />
+    <None Remove="LIVE\11.2.00\Windows64\StandaloneWindows64_live2dcharacter_6.unity3d" />
+    <None Remove="LIVE\11.2.00\Windows64\StandaloneWindows64_live2dcharacter_7.unity3d" />
+    <None Remove="LIVE\11.2.00\Windows64\StandaloneWindows64_live2dcharacter_8.unity3d" />
+    <None Remove="LIVE\11.2.00\Windows64\StandaloneWindows64_live2dcharacter_9.unity3d" />
+    <None Remove="LIVE\11.2.00\Windows64\StandaloneWindows64_live2dcharacter_other.unity3d" />
+    <None Remove="LIVE\11.2.00\Windows64\StandaloneWindows64_monster.unity3d" />
+    <None Remove="LIVE\11.2.00\Windows64\StandaloneWindows64_record.unity3d" />
+    <None Remove="LIVE\11.2.00\Windows64\StandaloneWindows64_sdcharacter_1.unity3d" />
+    <None Remove="LIVE\11.2.00\Windows64\StandaloneWindows64_sdcharacter_2.unity3d" />
+    <None Remove="LIVE\11.2.00\Windows64\StandaloneWindows64_sdcharacter_3.unity3d" />
+    <None Remove="LIVE\11.2.00\Windows64\StandaloneWindows64_sdcharacter_other.unity3d" />
+    <None Remove="LIVE\11.2.00\Windows64\StandaloneWindows64_skincollection.unity3d" />
+    <None Remove="LIVE\11.2.00\Windows64\StandaloneWindows64_sound_english_aglaia_bgm_1.unity3d" />
+    <None Remove="LIVE\11.2.00\Windows64\StandaloneWindows64_sound_english_aglaia_bgm_2.unity3d" />
+    <None Remove="LIVE\11.2.00\Windows64\StandaloneWindows64_sound_english_aglaia_bgm_3.unity3d" />
+    <None Remove="LIVE\11.2.00\Windows64\StandaloneWindows64_sound_english_announce.unity3d" />
+    <None Remove="LIVE\11.2.00\Windows64\StandaloneWindows64_sound_english_bgm_1.unity3d" />
+    <None Remove="LIVE\11.2.00\Windows64\StandaloneWindows64_sound_english_bgm_2.unity3d" />
+    <None Remove="LIVE\11.2.00\Windows64\StandaloneWindows64_sound_english_character_1.unity3d" />
+    <None Remove="LIVE\11.2.00\Windows64\StandaloneWindows64_sound_english_character_10.unity3d" />
+    <None Remove="LIVE\11.2.00\Windows64\StandaloneWindows64_sound_english_character_11.unity3d" />
+    <None Remove="LIVE\11.2.00\Windows64\StandaloneWindows64_sound_english_character_2.unity3d" />
+    <None Remove="LIVE\11.2.00\Windows64\StandaloneWindows64_sound_english_character_3.unity3d" />
+    <None Remove="LIVE\11.2.00\Windows64\StandaloneWindows64_sound_english_character_4.unity3d" />
+    <None Remove="LIVE\11.2.00\Windows64\StandaloneWindows64_sound_english_character_5.unity3d" />
+    <None Remove="LIVE\11.2.00\Windows64\StandaloneWindows64_sound_english_character_6.unity3d" />
+    <None Remove="LIVE\11.2.00\Windows64\StandaloneWindows64_sound_english_character_7.unity3d" />
+    <None Remove="LIVE\11.2.00\Windows64\StandaloneWindows64_sound_english_character_8.unity3d" />
+    <None Remove="LIVE\11.2.00\Windows64\StandaloneWindows64_sound_english_character_9.unity3d" />
+    <None Remove="LIVE\11.2.00\Windows64\StandaloneWindows64_sound_english_codex.unity3d" />
+    <None Remove="LIVE\11.2.00\Windows64\StandaloneWindows64_sound_english_fx.unity3d" />
+    <None Remove="LIVE\11.2.00\Windows64\StandaloneWindows64_sound_english_interaction_1.unity3d" />
+    <None Remove="LIVE\11.2.00\Windows64\StandaloneWindows64_sound_english_interaction_2.unity3d" />
+    <None Remove="LIVE\11.2.00\Windows64\StandaloneWindows64_sound_english_labyrinth_bgm.unity3d" />
+    <None Remove="LIVE\11.2.00\Windows64\StandaloneWindows64_sound_english_monologue_1.unity3d" />
+    <None Remove="LIVE\11.2.00\Windows64\StandaloneWindows64_sound_english_monologue_2.unity3d" />
+    <None Remove="LIVE\11.2.00\Windows64\StandaloneWindows64_sound_english_monologue_3.unity3d" />
+    <None Remove="LIVE\11.2.00\Windows64\StandaloneWindows64_sound_english_monster.unity3d" />
+    <None Remove="LIVE\11.2.00\Windows64\StandaloneWindows64_sound_english_pve.unity3d" />
+    <None Remove="LIVE\11.2.00\Windows64\StandaloneWindows64_sound_english_signature_1.unity3d" />
+    <None Remove="LIVE\11.2.00\Windows64\StandaloneWindows64_sound_english_signature_2.unity3d" />
+    <None Remove="LIVE\11.2.00\Windows64\StandaloneWindows64_sound_english_skilleffect.unity3d" />
+    <None Remove="LIVE\11.2.00\Windows64\StandaloneWindows64_sound_english_story.unity3d" />
+    <None Remove="LIVE\11.2.00\Windows64\StandaloneWindows64_sound_japanese_aglaia_bgm_1.unity3d" />
+    <None Remove="LIVE\11.2.00\Windows64\StandaloneWindows64_sound_japanese_aglaia_bgm_2.unity3d" />
+    <None Remove="LIVE\11.2.00\Windows64\StandaloneWindows64_sound_japanese_announce.unity3d" />
+    <None Remove="LIVE\11.2.00\Windows64\StandaloneWindows64_sound_japanese_bgm_1.unity3d" />
+    <None Remove="LIVE\11.2.00\Windows64\StandaloneWindows64_sound_japanese_bgm_2.unity3d" />
+    <None Remove="LIVE\11.2.00\Windows64\StandaloneWindows64_sound_japanese_character_1.unity3d" />
+    <None Remove="LIVE\11.2.00\Windows64\StandaloneWindows64_sound_japanese_character_10.unity3d" />
+    <None Remove="LIVE\11.2.00\Windows64\StandaloneWindows64_sound_japanese_character_11.unity3d" />
+    <None Remove="LIVE\11.2.00\Windows64\StandaloneWindows64_sound_japanese_character_2.unity3d" />
+    <None Remove="LIVE\11.2.00\Windows64\StandaloneWindows64_sound_japanese_character_3.unity3d" />
+    <None Remove="LIVE\11.2.00\Windows64\StandaloneWindows64_sound_japanese_character_4.unity3d" />
+    <None Remove="LIVE\11.2.00\Windows64\StandaloneWindows64_sound_japanese_character_5.unity3d" />
+    <None Remove="LIVE\11.2.00\Windows64\StandaloneWindows64_sound_japanese_character_6.unity3d" />
+    <None Remove="LIVE\11.2.00\Windows64\StandaloneWindows64_sound_japanese_character_7.unity3d" />
+    <None Remove="LIVE\11.2.00\Windows64\StandaloneWindows64_sound_japanese_character_8.unity3d" />
+    <None Remove="LIVE\11.2.00\Windows64\StandaloneWindows64_sound_japanese_character_9.unity3d" />
+    <None Remove="LIVE\11.2.00\Windows64\StandaloneWindows64_sound_japanese_codex.unity3d" />
+    <None Remove="LIVE\11.2.00\Windows64\StandaloneWindows64_sound_japanese_fx.unity3d" />
+    <None Remove="LIVE\11.2.00\Windows64\StandaloneWindows64_sound_japanese_interaction_1.unity3d" />
+    <None Remove="LIVE\11.2.00\Windows64\StandaloneWindows64_sound_japanese_interaction_2.unity3d" />
+    <None Remove="LIVE\11.2.00\Windows64\StandaloneWindows64_sound_japanese_labyrinth_bgm.unity3d" />
+    <None Remove="LIVE\11.2.00\Windows64\StandaloneWindows64_sound_japanese_monologue_1.unity3d" />
+    <None Remove="LIVE\11.2.00\Windows64\StandaloneWindows64_sound_japanese_monologue_2.unity3d" />
+    <None Remove="LIVE\11.2.00\Windows64\StandaloneWindows64_sound_japanese_monologue_3.unity3d" />
+    <None Remove="LIVE\11.2.00\Windows64\StandaloneWindows64_sound_japanese_monster.unity3d" />
+    <None Remove="LIVE\11.2.00\Windows64\StandaloneWindows64_sound_japanese_pve.unity3d" />
+    <None Remove="LIVE\11.2.00\Windows64\StandaloneWindows64_sound_japanese_signature_1.unity3d" />
+    <None Remove="LIVE\11.2.00\Windows64\StandaloneWindows64_sound_japanese_signature_2.unity3d" />
+    <None Remove="LIVE\11.2.00\Windows64\StandaloneWindows64_sound_japanese_skilleffect.unity3d" />
+    <None Remove="LIVE\11.2.00\Windows64\StandaloneWindows64_sound_japanese_story.unity3d" />
+    <None Remove="LIVE\11.2.00\Windows64\StandaloneWindows64_sound_korean_aglaia_bgm_1.unity3d" />
+    <None Remove="LIVE\11.2.00\Windows64\StandaloneWindows64_sound_korean_aglaia_bgm_2.unity3d" />
+    <None Remove="LIVE\11.2.00\Windows64\StandaloneWindows64_sound_korean_aglaia_bgm_3.unity3d" />
+    <None Remove="LIVE\11.2.00\Windows64\StandaloneWindows64_sound_korean_announce.unity3d" />
+    <None Remove="LIVE\11.2.00\Windows64\StandaloneWindows64_sound_korean_bgm_1.unity3d" />
+    <None Remove="LIVE\11.2.00\Windows64\StandaloneWindows64_sound_korean_bgm_2.unity3d" />
+    <None Remove="LIVE\11.2.00\Windows64\StandaloneWindows64_sound_korean_character_1.unity3d" />
+    <None Remove="LIVE\11.2.00\Windows64\StandaloneWindows64_sound_korean_character_10.unity3d" />
+    <None Remove="LIVE\11.2.00\Windows64\StandaloneWindows64_sound_korean_character_11.unity3d" />
+    <None Remove="LIVE\11.2.00\Windows64\StandaloneWindows64_sound_korean_character_2.unity3d" />
+    <None Remove="LIVE\11.2.00\Windows64\StandaloneWindows64_sound_korean_character_3.unity3d" />
+    <None Remove="LIVE\11.2.00\Windows64\StandaloneWindows64_sound_korean_character_4.unity3d" />
+    <None Remove="LIVE\11.2.00\Windows64\StandaloneWindows64_sound_korean_character_5.unity3d" />
+    <None Remove="LIVE\11.2.00\Windows64\StandaloneWindows64_sound_korean_character_6.unity3d" />
+    <None Remove="LIVE\11.2.00\Windows64\StandaloneWindows64_sound_korean_character_7.unity3d" />
+    <None Remove="LIVE\11.2.00\Windows64\StandaloneWindows64_sound_korean_character_8.unity3d" />
+    <None Remove="LIVE\11.2.00\Windows64\StandaloneWindows64_sound_korean_character_9.unity3d" />
+    <None Remove="LIVE\11.2.00\Windows64\StandaloneWindows64_sound_korean_codex.unity3d" />
+    <None Remove="LIVE\11.2.00\Windows64\StandaloneWindows64_sound_korean_fx.unity3d" />
+    <None Remove="LIVE\11.2.00\Windows64\StandaloneWindows64_sound_korean_interaction_1.unity3d" />
+    <None Remove="LIVE\11.2.00\Windows64\StandaloneWindows64_sound_korean_interaction_2.unity3d" />
+    <None Remove="LIVE\11.2.00\Windows64\StandaloneWindows64_sound_korean_labyrinth_bgm.unity3d" />
+    <None Remove="LIVE\11.2.00\Windows64\StandaloneWindows64_sound_korean_monologue_1.unity3d" />
+    <None Remove="LIVE\11.2.00\Windows64\StandaloneWindows64_sound_korean_monologue_2.unity3d" />
+    <None Remove="LIVE\11.2.00\Windows64\StandaloneWindows64_sound_korean_monologue_3.unity3d" />
+    <None Remove="LIVE\11.2.00\Windows64\StandaloneWindows64_sound_korean_monster.unity3d" />
+    <None Remove="LIVE\11.2.00\Windows64\StandaloneWindows64_sound_korean_pve.unity3d" />
+    <None Remove="LIVE\11.2.00\Windows64\StandaloneWindows64_sound_korean_signature_1.unity3d" />
+    <None Remove="LIVE\11.2.00\Windows64\StandaloneWindows64_sound_korean_signature_2.unity3d" />
+    <None Remove="LIVE\11.2.00\Windows64\StandaloneWindows64_sound_korean_skilleffect.unity3d" />
+    <None Remove="LIVE\11.2.00\Windows64\StandaloneWindows64_sound_korean_story.unity3d" />
+    <None Remove="LIVE\11.2.00\Windows64\StandaloneWindows64_sound_strings.unity3d" />
+    <None Remove="LIVE\11.2.00\Windows64\StandaloneWindows64_storyscript.unity3d" />
+    <None Remove="LIVE\11.2.00\Windows64\StandaloneWindows64_tutorial.unity3d" />
+    <None Remove="LIVE\11.2.00\Windows64\StandaloneWindows64_ui_1.unity3d" />
+    <None Remove="LIVE\11.2.00\Windows64\StandaloneWindows64_ui_2.unity3d" />
+    <None Remove="LIVE\11.2.00\Windows64\StandaloneWindows64_ui_3.unity3d" />
+    <None Remove="LIVE\11.2.00\Windows64\StandaloneWindows64_ui_4.unity3d" />
+    <None Remove="LIVE\11.2.00\Windows64\StandaloneWindows64_ui_5.unity3d" />
+    <None Remove="LIVE\11.2.00\Windows64\StandaloneWindows64_ui_6.unity3d" />
+  </ItemGroup>
+
+   <ItemGroup>
+    <Content Include="config.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="LIVE\11.2.00\Windows64\BundleList.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="LIVE\11.2.00\Windows64\StandaloneWindows64">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="LIVE\11.2.00\Windows64\StandaloneWindows64.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="LIVE\11.2.00\Windows64\StandaloneWindows64_aglaiastory.unity3d">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="LIVE\11.2.00\Windows64\StandaloneWindows64_background_1.unity3d">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="LIVE\11.2.00\Windows64\StandaloneWindows64_background_2.unity3d">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="LIVE\11.2.00\Windows64\StandaloneWindows64_character_1.unity3d">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="LIVE\11.2.00\Windows64\StandaloneWindows64_character_2.unity3d">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="LIVE\11.2.00\Windows64\StandaloneWindows64_character_3.unity3d">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="LIVE\11.2.00\Windows64\StandaloneWindows64_character_4.unity3d">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="LIVE\11.2.00\Windows64\StandaloneWindows64_character_5.unity3d">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="LIVE\11.2.00\Windows64\StandaloneWindows64_character_other.unity3d">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="LIVE\11.2.00\Windows64\StandaloneWindows64_character_overlay.unity3d">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="LIVE\11.2.00\Windows64\StandaloneWindows64_character_pieces.unity3d">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="LIVE\11.2.00\Windows64\StandaloneWindows64_character_scenario.unity3d">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="LIVE\11.2.00\Windows64\StandaloneWindows64_cutscene.unity3d">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="LIVE\11.2.00\Windows64\StandaloneWindows64_gamedata.unity3d">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="LIVE\11.2.00\Windows64\StandaloneWindows64_gametext.unity3d">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="LIVE\11.2.00\Windows64\StandaloneWindows64_goods_avatar.unity3d">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="LIVE\11.2.00\Windows64\StandaloneWindows64_goods_background_1.unity3d">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="LIVE\11.2.00\Windows64\StandaloneWindows64_goods_background_2.unity3d">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="LIVE\11.2.00\Windows64\StandaloneWindows64_goods_emoticon.unity3d">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="LIVE\11.2.00\Windows64\StandaloneWindows64_goods_furniture.unity3d">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="LIVE\11.2.00\Windows64\StandaloneWindows64_goods_lantern.unity3d">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="LIVE\11.2.00\Windows64\StandaloneWindows64_goods_other.unity3d">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="LIVE\11.2.00\Windows64\StandaloneWindows64_itemicon.unity3d">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="LIVE\11.2.00\Windows64\StandaloneWindows64_lantern.unity3d">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="LIVE\11.2.00\Windows64\StandaloneWindows64_live2dcharacter_1.unity3d">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="LIVE\11.2.00\Windows64\StandaloneWindows64_live2dcharacter_10.unity3d">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="LIVE\11.2.00\Windows64\StandaloneWindows64_live2dcharacter_2.unity3d">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="LIVE\11.2.00\Windows64\StandaloneWindows64_live2dcharacter_3.unity3d">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="LIVE\11.2.00\Windows64\StandaloneWindows64_live2dcharacter_4.unity3d">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="LIVE\11.2.00\Windows64\StandaloneWindows64_live2dcharacter_5.unity3d">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="LIVE\11.2.00\Windows64\StandaloneWindows64_live2dcharacter_6.unity3d">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="LIVE\11.2.00\Windows64\StandaloneWindows64_live2dcharacter_7.unity3d">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="LIVE\11.2.00\Windows64\StandaloneWindows64_live2dcharacter_8.unity3d">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="LIVE\11.2.00\Windows64\StandaloneWindows64_live2dcharacter_9.unity3d">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="LIVE\11.2.00\Windows64\StandaloneWindows64_live2dcharacter_other.unity3d">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="LIVE\11.2.00\Windows64\StandaloneWindows64_monster.unity3d">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="LIVE\11.2.00\Windows64\StandaloneWindows64_record.unity3d">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="LIVE\11.2.00\Windows64\StandaloneWindows64_sdcharacter_1.unity3d">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="LIVE\11.2.00\Windows64\StandaloneWindows64_sdcharacter_2.unity3d">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="LIVE\11.2.00\Windows64\StandaloneWindows64_sdcharacter_3.unity3d">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="LIVE\11.2.00\Windows64\StandaloneWindows64_sdcharacter_other.unity3d">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="LIVE\11.2.00\Windows64\StandaloneWindows64_skincollection.unity3d">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="LIVE\11.2.00\Windows64\StandaloneWindows64_sound_english_aglaia_bgm_1.unity3d">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="LIVE\11.2.00\Windows64\StandaloneWindows64_sound_english_aglaia_bgm_2.unity3d">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="LIVE\11.2.00\Windows64\StandaloneWindows64_sound_english_aglaia_bgm_3.unity3d">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="LIVE\11.2.00\Windows64\StandaloneWindows64_sound_english_announce.unity3d">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="LIVE\11.2.00\Windows64\StandaloneWindows64_sound_english_bgm_1.unity3d">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="LIVE\11.2.00\Windows64\StandaloneWindows64_sound_english_bgm_2.unity3d">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="LIVE\11.2.00\Windows64\StandaloneWindows64_sound_english_character_1.unity3d">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="LIVE\11.2.00\Windows64\StandaloneWindows64_sound_english_character_10.unity3d">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="LIVE\11.2.00\Windows64\StandaloneWindows64_sound_english_character_11.unity3d">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="LIVE\11.2.00\Windows64\StandaloneWindows64_sound_english_character_2.unity3d">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="LIVE\11.2.00\Windows64\StandaloneWindows64_sound_english_character_3.unity3d">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="LIVE\11.2.00\Windows64\StandaloneWindows64_sound_english_character_4.unity3d">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="LIVE\11.2.00\Windows64\StandaloneWindows64_sound_english_character_5.unity3d">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="LIVE\11.2.00\Windows64\StandaloneWindows64_sound_english_character_6.unity3d">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="LIVE\11.2.00\Windows64\StandaloneWindows64_sound_english_character_7.unity3d">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="LIVE\11.2.00\Windows64\StandaloneWindows64_sound_english_character_8.unity3d">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="LIVE\11.2.00\Windows64\StandaloneWindows64_sound_english_character_9.unity3d">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="LIVE\11.2.00\Windows64\StandaloneWindows64_sound_english_codex.unity3d">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="LIVE\11.2.00\Windows64\StandaloneWindows64_sound_english_fx.unity3d">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="LIVE\11.2.00\Windows64\StandaloneWindows64_sound_english_interaction_1.unity3d">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="LIVE\11.2.00\Windows64\StandaloneWindows64_sound_english_interaction_2.unity3d">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="LIVE\11.2.00\Windows64\StandaloneWindows64_sound_english_labyrinth_bgm.unity3d">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="LIVE\11.2.00\Windows64\StandaloneWindows64_sound_english_monologue_1.unity3d">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="LIVE\11.2.00\Windows64\StandaloneWindows64_sound_english_monologue_2.unity3d">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="LIVE\11.2.00\Windows64\StandaloneWindows64_sound_english_monologue_3.unity3d">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="LIVE\11.2.00\Windows64\StandaloneWindows64_sound_english_monster.unity3d">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="LIVE\11.2.00\Windows64\StandaloneWindows64_sound_english_pve.unity3d">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="LIVE\11.2.00\Windows64\StandaloneWindows64_sound_english_signature_1.unity3d">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="LIVE\11.2.00\Windows64\StandaloneWindows64_sound_english_signature_2.unity3d">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="LIVE\11.2.00\Windows64\StandaloneWindows64_sound_english_skilleffect.unity3d">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="LIVE\11.2.00\Windows64\StandaloneWindows64_sound_english_story.unity3d">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="LIVE\11.2.00\Windows64\StandaloneWindows64_sound_japanese_aglaia_bgm_1.unity3d">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="LIVE\11.2.00\Windows64\StandaloneWindows64_sound_japanese_aglaia_bgm_2.unity3d">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="LIVE\11.2.00\Windows64\StandaloneWindows64_sound_japanese_announce.unity3d">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="LIVE\11.2.00\Windows64\StandaloneWindows64_sound_japanese_bgm_1.unity3d">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="LIVE\11.2.00\Windows64\StandaloneWindows64_sound_japanese_bgm_2.unity3d">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="LIVE\11.2.00\Windows64\StandaloneWindows64_sound_japanese_character_1.unity3d">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="LIVE\11.2.00\Windows64\StandaloneWindows64_sound_japanese_character_10.unity3d">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="LIVE\11.2.00\Windows64\StandaloneWindows64_sound_japanese_character_11.unity3d">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="LIVE\11.2.00\Windows64\StandaloneWindows64_sound_japanese_character_2.unity3d">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="LIVE\11.2.00\Windows64\StandaloneWindows64_sound_japanese_character_3.unity3d">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="LIVE\11.2.00\Windows64\StandaloneWindows64_sound_japanese_character_4.unity3d">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="LIVE\11.2.00\Windows64\StandaloneWindows64_sound_japanese_character_5.unity3d">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="LIVE\11.2.00\Windows64\StandaloneWindows64_sound_japanese_character_6.unity3d">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="LIVE\11.2.00\Windows64\StandaloneWindows64_sound_japanese_character_7.unity3d">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="LIVE\11.2.00\Windows64\StandaloneWindows64_sound_japanese_character_8.unity3d">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="LIVE\11.2.00\Windows64\StandaloneWindows64_sound_japanese_character_9.unity3d">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="LIVE\11.2.00\Windows64\StandaloneWindows64_sound_japanese_codex.unity3d">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="LIVE\11.2.00\Windows64\StandaloneWindows64_sound_japanese_fx.unity3d">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="LIVE\11.2.00\Windows64\StandaloneWindows64_sound_japanese_interaction_1.unity3d">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="LIVE\11.2.00\Windows64\StandaloneWindows64_sound_japanese_interaction_2.unity3d">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="LIVE\11.2.00\Windows64\StandaloneWindows64_sound_japanese_labyrinth_bgm.unity3d">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="LIVE\11.2.00\Windows64\StandaloneWindows64_sound_japanese_monologue_1.unity3d">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="LIVE\11.2.00\Windows64\StandaloneWindows64_sound_japanese_monologue_2.unity3d">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="LIVE\11.2.00\Windows64\StandaloneWindows64_sound_japanese_monologue_3.unity3d">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="LIVE\11.2.00\Windows64\StandaloneWindows64_sound_japanese_monster.unity3d">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="LIVE\11.2.00\Windows64\StandaloneWindows64_sound_japanese_pve.unity3d">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="LIVE\11.2.00\Windows64\StandaloneWindows64_sound_japanese_signature_1.unity3d">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="LIVE\11.2.00\Windows64\StandaloneWindows64_sound_japanese_signature_2.unity3d">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="LIVE\11.2.00\Windows64\StandaloneWindows64_sound_japanese_skilleffect.unity3d">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="LIVE\11.2.00\Windows64\StandaloneWindows64_sound_japanese_story.unity3d">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="LIVE\11.2.00\Windows64\StandaloneWindows64_sound_korean_aglaia_bgm_1.unity3d">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="LIVE\11.2.00\Windows64\StandaloneWindows64_sound_korean_aglaia_bgm_2.unity3d">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="LIVE\11.2.00\Windows64\StandaloneWindows64_sound_korean_aglaia_bgm_3.unity3d">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="LIVE\11.2.00\Windows64\StandaloneWindows64_sound_korean_announce.unity3d">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="LIVE\11.2.00\Windows64\StandaloneWindows64_sound_korean_bgm_1.unity3d">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="LIVE\11.2.00\Windows64\StandaloneWindows64_sound_korean_bgm_2.unity3d">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="LIVE\11.2.00\Windows64\StandaloneWindows64_sound_korean_character_1.unity3d">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="LIVE\11.2.00\Windows64\StandaloneWindows64_sound_korean_character_10.unity3d">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="LIVE\11.2.00\Windows64\StandaloneWindows64_sound_korean_character_11.unity3d">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="LIVE\11.2.00\Windows64\StandaloneWindows64_sound_korean_character_2.unity3d">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="LIVE\11.2.00\Windows64\StandaloneWindows64_sound_korean_character_3.unity3d">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="LIVE\11.2.00\Windows64\StandaloneWindows64_sound_korean_character_4.unity3d">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="LIVE\11.2.00\Windows64\StandaloneWindows64_sound_korean_character_5.unity3d">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="LIVE\11.2.00\Windows64\StandaloneWindows64_sound_korean_character_6.unity3d">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="LIVE\11.2.00\Windows64\StandaloneWindows64_sound_korean_character_7.unity3d">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="LIVE\11.2.00\Windows64\StandaloneWindows64_sound_korean_character_8.unity3d">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="LIVE\11.2.00\Windows64\StandaloneWindows64_sound_korean_character_9.unity3d">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="LIVE\11.2.00\Windows64\StandaloneWindows64_sound_korean_codex.unity3d">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="LIVE\11.2.00\Windows64\StandaloneWindows64_sound_korean_fx.unity3d">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="LIVE\11.2.00\Windows64\StandaloneWindows64_sound_korean_interaction_1.unity3d">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="LIVE\11.2.00\Windows64\StandaloneWindows64_sound_korean_interaction_2.unity3d">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="LIVE\11.2.00\Windows64\StandaloneWindows64_sound_korean_labyrinth_bgm.unity3d">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="LIVE\11.2.00\Windows64\StandaloneWindows64_sound_korean_monologue_1.unity3d">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="LIVE\11.2.00\Windows64\StandaloneWindows64_sound_korean_monologue_2.unity3d">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="LIVE\11.2.00\Windows64\StandaloneWindows64_sound_korean_monologue_3.unity3d">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="LIVE\11.2.00\Windows64\StandaloneWindows64_sound_korean_monster.unity3d">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="LIVE\11.2.00\Windows64\StandaloneWindows64_sound_korean_pve.unity3d">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="LIVE\11.2.00\Windows64\StandaloneWindows64_sound_korean_signature_1.unity3d">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="LIVE\11.2.00\Windows64\StandaloneWindows64_sound_korean_signature_2.unity3d">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="LIVE\11.2.00\Windows64\StandaloneWindows64_sound_korean_skilleffect.unity3d">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="LIVE\11.2.00\Windows64\StandaloneWindows64_sound_korean_story.unity3d">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="LIVE\11.2.00\Windows64\StandaloneWindows64_sound_strings.unity3d">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="LIVE\11.2.00\Windows64\StandaloneWindows64_storyscript.unity3d">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="LIVE\11.2.00\Windows64\StandaloneWindows64_tutorial.unity3d">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="LIVE\11.2.00\Windows64\StandaloneWindows64_ui_1.unity3d">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="LIVE\11.2.00\Windows64\StandaloneWindows64_ui_2.unity3d">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="LIVE\11.2.00\Windows64\StandaloneWindows64_ui_3.unity3d">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="LIVE\11.2.00\Windows64\StandaloneWindows64_ui_4.unity3d">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="LIVE\11.2.00\Windows64\StandaloneWindows64_ui_5.unity3d">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="LIVE\11.2.00\Windows64\StandaloneWindows64_ui_6.unity3d">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="ChoETL.JSON" Version="1.2.1.50" />
+    <PackageReference Include="ChoETL.SQLite.Core" Version="1.0.0.4" />
+    <PackageReference Include="Discord.Net" Version="3.8.1" />
+    <PackageReference Include="Grapevine" Version="5.0.0-rc.10" />
+    <PackageReference Include="Jint" Version="3.0.0-beta-2037" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="6.0.10" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="6.0.1" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="6.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Hosting" Version="6.0.1" />
+    <PackageReference Include="Microsoft.IO.RecyclableMemoryStream" Version="2.2.1" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+    <PackageReference Include="Serilog.Enrichers.Thread" Version="3.1.0" />
+    <PackageReference Include="Serilog.Extensions.Logging" Version="3.1.0" />
+    <PackageReference Include="Serilog.Sinks.ColoredConsole" Version="3.0.1" />
+    <PackageReference Include="Serilog.Sinks.File" Version="5.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="WatsonWebsocket\WatsonWebsocket.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Common\Model\Perk\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Discord\config.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="data\rankings\rankinghistory.db">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Promotion\English\ServiceRevival.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+</Project>

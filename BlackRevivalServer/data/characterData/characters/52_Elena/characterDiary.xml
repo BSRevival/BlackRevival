@@ -1,0 +1,37 @@
+<charDiary_52>
+    <characterDairy>
+        <cod>52</cod>
+        <spc>
+            <csc>52</csc>
+            <d>0</d>
+            <dt>0</dt>
+            <ot>0</ot>
+            <f>0</f>
+        </spc>
+        <spc>
+            <csc>52</csc>
+            <d>1</d>
+            <dt>8</dt>
+            <ot>3</ot>
+            <od>16006</od>
+            <f>5</f>
+        </spc>
+        <spc>
+            <csc>52</csc>
+            <d>2</d>
+            <dt>11</dt>
+            <ot>6</ot>
+            <od>13545</od>
+            <f>10</f>
+        </spc>
+        <spc>
+            <csc>52</csc>
+            <d>3</d>
+            <dt>7</dt>
+            <ot>3</ot>
+            <od>32017</od>
+            <f>10</f>
+        </spc>
+        <siz>4</siz>
+    </characterDairy>
+</charDiary_52>

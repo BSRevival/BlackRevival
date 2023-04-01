@@ -1,0 +1,14 @@
+{
+  "version": "1.0",
+  "token": "ReplaceWithYourBotToken",
+
+  "prefixes": [ "." ],
+  "join_message": ":computer:Experiment Begin:exclamation:",
+
+  "currently": "playing|listening|watching|streaming",
+  "playing_status": "Black Survival.",
+  "status": "online|dnd|idle|offline",
+  "build": "11.2.00",
+  "online_title": ":robot: **Experiment Online!**",
+  "online_message": "**Experiement BEGIN!**"
+}

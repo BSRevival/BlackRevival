@@ -1,0 +1,51 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32421.90
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlackRevivalServer", "BlackRevivalServer.csproj", "{A015B37F-3F1B-486B-9C83-4DB2930B3BC6}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WatsonWebsocket", "WatsonWebsocket\WatsonWebsocket.csproj", "{3F4EC7F8-BF04-4A65-BBC6-CDA2ACA3AE45}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameDBDecryptor", "GameDBDecryptor\GameDBDecryptor.csproj", "{9AE493A0-7179-4032-A27C-5B895214FBB6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug_Ubuntu|Any CPU = Debug_Ubuntu|Any CPU
+		Debug|Any CPU = Debug|Any CPU
+		Release_Ubuntu|Any CPU = Release_Ubuntu|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A015B37F-3F1B-486B-9C83-4DB2930B3BC6}.Debug_Ubuntu|Any CPU.ActiveCfg = Debug|Any CPU
+		{A015B37F-3F1B-486B-9C83-4DB2930B3BC6}.Debug_Ubuntu|Any CPU.Build.0 = Debug|Any CPU
+		{A015B37F-3F1B-486B-9C83-4DB2930B3BC6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A015B37F-3F1B-486B-9C83-4DB2930B3BC6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A015B37F-3F1B-486B-9C83-4DB2930B3BC6}.Release_Ubuntu|Any CPU.ActiveCfg = Release|Any CPU
+		{A015B37F-3F1B-486B-9C83-4DB2930B3BC6}.Release_Ubuntu|Any CPU.Build.0 = Release|Any CPU
+		{A015B37F-3F1B-486B-9C83-4DB2930B3BC6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A015B37F-3F1B-486B-9C83-4DB2930B3BC6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3F4EC7F8-BF04-4A65-BBC6-CDA2ACA3AE45}.Debug_Ubuntu|Any CPU.ActiveCfg = Debug|Any CPU
+		{3F4EC7F8-BF04-4A65-BBC6-CDA2ACA3AE45}.Debug_Ubuntu|Any CPU.Build.0 = Debug|Any CPU
+		{3F4EC7F8-BF04-4A65-BBC6-CDA2ACA3AE45}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3F4EC7F8-BF04-4A65-BBC6-CDA2ACA3AE45}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3F4EC7F8-BF04-4A65-BBC6-CDA2ACA3AE45}.Release_Ubuntu|Any CPU.ActiveCfg = Release|Any CPU
+		{3F4EC7F8-BF04-4A65-BBC6-CDA2ACA3AE45}.Release_Ubuntu|Any CPU.Build.0 = Release|Any CPU
+		{3F4EC7F8-BF04-4A65-BBC6-CDA2ACA3AE45}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3F4EC7F8-BF04-4A65-BBC6-CDA2ACA3AE45}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9AE493A0-7179-4032-A27C-5B895214FBB6}.Debug_Ubuntu|Any CPU.ActiveCfg = Debug|Any CPU
+		{9AE493A0-7179-4032-A27C-5B895214FBB6}.Debug_Ubuntu|Any CPU.Build.0 = Debug|Any CPU
+		{9AE493A0-7179-4032-A27C-5B895214FBB6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9AE493A0-7179-4032-A27C-5B895214FBB6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9AE493A0-7179-4032-A27C-5B895214FBB6}.Release_Ubuntu|Any CPU.ActiveCfg = Release|Any CPU
+		{9AE493A0-7179-4032-A27C-5B895214FBB6}.Release_Ubuntu|Any CPU.Build.0 = Release|Any CPU
+		{9AE493A0-7179-4032-A27C-5B895214FBB6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9AE493A0-7179-4032-A27C-5B895214FBB6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {CF818AF2-F7C4-4B79-9739-1F856F733428}
+	EndGlobalSection
+EndGlobal

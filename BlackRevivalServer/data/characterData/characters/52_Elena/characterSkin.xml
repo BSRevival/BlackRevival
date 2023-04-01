@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+</characterSkin_52> 
+ <characterSkins>
+        <unm>2863408</unm>
+        <cls>52</cls>
+        <ckt>5201</ckt>
+        <own>true</own>
+        <live>false</live>
+        <setp>1</setp>
+    </characterSkins>
+    <characterSkins>
+        <unm>0</unm>
+        <cls>52</cls>
+        <ckt>5202</ckt>
+        <own>false</own>
+        <live>false</live>
+        <setp>1</setp>
+    </characterSkins>
+</characterSkin_52>

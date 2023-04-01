@@ -1,0 +1,54 @@
+<!--
+	csc = character class
+	d = diary
+	dt = research diary type
+	ot = object type
+	od = object data
+	f = factor
+-->
+
+<?xml version="1.0" encoding="UTF-8" ?>
+<CharDiary_4> 
+ <characterDairy>
+        <cod>4</cod>
+        <spc>
+            <csc>4</csc>
+            <d>0</d>
+            <dt>0</dt>
+            <ot>0</ot>
+            <f>0</f>
+        </spc>
+        <spc>
+            <csc>4</csc>
+            <d>1</d>
+            <dt>3</dt>
+            <ot>1</ot>
+            <f>1000</f>
+        </spc>
+        <spc>
+            <csc>4</csc>
+            <d>2</d>
+            <dt>7</dt>
+            <ot>3</ot>
+            <od>31006</od>
+            <f>20</f>
+        </spc>
+        <spc>
+            <csc>4</csc>
+            <d>3</d>
+            <dt>2</dt>
+            <ot>3</ot>
+            <od>31054</od>
+            <f>60</f>
+        </spc>
+        <spc>
+            <csc>4</csc>
+            <d>4</d>
+            <dt>8</dt>
+            <ot>3</ot>
+            <od>11015</od>
+            <f>20</f>
+        </spc>
+        <siz>5</siz>
+    </characterDairy>
+</CharDiary_4>
