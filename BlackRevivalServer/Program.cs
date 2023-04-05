@@ -56,7 +56,7 @@ namespace BlackRevivalServer
             string configFileText = @"
                 service('DatabaseService', {});
                 service('DiscordService', {});
-                service('WebService', {WebAddress: Address('127.0.0.1:10080')})
+                service('WebService', {WebAddress: Address('127.0.0.1:10800')})
                 service('GameService', {GameAddress: Address('127.0.0.1:27900')});
             ";
 
@@ -65,7 +65,7 @@ namespace BlackRevivalServer
             {
                 configFileText = @"
                     service('DatabaseService', {});
-                    service('WebService', {WebAddress: Address('127.0.0.1:10080')})
+                    service('WebService', {WebAddress: Address('127.0.0.1:10800')})
                     service('GameService', {GameAddress: Address('127.0.0.1:27900')});
                 ";
                 Log.Information("Registering services...");

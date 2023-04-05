@@ -182,7 +182,7 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="LIVE\11.2.00\Windows64\StandaloneWindows64.txt">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Content>
     <Content Include="LIVE\11.2.00\Windows64\StandaloneWindows64_aglaiastory.unity3d">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

@@ -27,7 +27,7 @@ namespace BlackRevivalServer.Http
         public void ConfigureServer(IRestServer server)
         {
             server.Prefixes.Clear();
-            server.Prefixes.Add("http://127.0.0.1:10080/");
+            server.Prefixes.Add("http://127.0.0.1:10800/");
         }
     }
 
@@ -35,7 +35,7 @@ namespace BlackRevivalServer.Http
     {
         public class Config
         {
-            public IPEndPoint WebAddress = new IPEndPoint(IPAddress.Parse("127.0.0.1"), 10080);
+            public IPEndPoint WebAddress = new IPEndPoint(IPAddress.Parse("127.0.0.1"), 10800);
         }
 
 
