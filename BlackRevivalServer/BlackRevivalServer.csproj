@@ -176,7 +176,7 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="LIVE\11.2.00\Windows64\BundleList.txt">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Content>
     <Content Include="LIVE\11.2.00\Windows64\StandaloneWindows64">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
