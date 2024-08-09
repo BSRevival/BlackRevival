@@ -1,7 +1,7 @@
 # Black Revival
 [![AGPL License](http://img.shields.io/badge/license-AGPL-brightgreen.svg)](https://opensource.org/licenses/AGPL-3.0)
 
-[![Discord Chat](https://dcbadge.vercel.app/api/server/XEbTFqB)](https://discord.gg/XEbTFqB)
+[![Discord Chat](https://dcbadge.vercel.app/api/server/projectlumia)](https://discord.com/projectlumia)
 --------------
 
 ## Black Survival Server Emulation Suite ##
